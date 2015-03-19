@@ -11,7 +11,7 @@
 @interface CollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) UILabel *label;
-//@property (strong, nonatomic) NSData *imageData;
 @property (strong, nonatomic) UIImageView *imageView;
 
+-(void)updateTitleLabel:(NSString *)string;
 @end

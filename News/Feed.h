@@ -17,5 +17,6 @@
 @property (strong, nonatomic) NSMutableDictionary *entry_image_data;
 
 - (void)downloadEntrySummariesWithCompletion:(void(^)(void))completion;
+- (void)downloadEntryImageAtIndex:(NSInteger)index withCompletion:(void(^)(NSData *))completion;
 - (void)readFromDictionary:(NSDictionary *)d;
 @end

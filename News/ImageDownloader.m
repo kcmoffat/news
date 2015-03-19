@@ -12,20 +12,22 @@
 
 - (void)start
 {
-    NSString *urlString = [self.imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSURL *url = [NSURL URLWithString:urlString];
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionTask *sessionTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
-                                     {
-                                         if (!error) {
-                                             if (self.completionHandler) {
-                                                 self.completionHandler(data);
+    if (![self.imageUrl isEqualToString:@""]) {
+        NSString *urlString = [self.imageUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *url = [NSURL URLWithString:urlString];
+        NSURLSession *session = [NSURLSession sharedSession];
+        NSURLSessionTask *sessionTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error)
+                                         {
+                                             if (!error && data.length > 0) {
+                                                 if (self.completionHandler) {
+                                                     self.completionHandler(data);
+                                                 }
+                                             } else {
+                                                 NSLog(@"error: %@", error.description);
                                              }
-                                         } else {
-                                             NSLog(@"error: %@", error.description);
-                                         }
-                                     }];
-    [sessionTask resume];
+                                         }];
+        [sessionTask resume];
+    }
 }
 
 @end

@@ -26,6 +26,17 @@
     [downloader start];
 }
 
+- (void)downloadEntryImageAtIndex:(NSInteger)index withCompletion:(void (^)(NSData *imageData))completion {
+    ImageDownloader *imageDownloader = [[ImageDownloader alloc] init];
+    imageDownloader.imageUrl = self.entry_images[index];
+    [imageDownloader setCompletionHandler:^(NSData *imageData) {
+        if (completion) {
+            completion(imageData);
+        }
+    }];
+    [imageDownloader start];
+}
+
 -(void)readFromDictionary:(NSDictionary *)d {
     NSDictionary *feed = d[@"feed"];
     self.title = feed[@"feed_title"];

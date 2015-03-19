@@ -23,7 +23,7 @@
     viewController.view.backgroundColor = [UIColor blackColor];
     viewController.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.viewController = [[UINavigationController alloc] initWithRootViewController:viewController];
-    self.viewController.navigationBar.barTintColor = [UIColor blackColor];
+    self.viewController.navigationBar.barStyle = UIBarStyleBlack;
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

@@ -17,6 +17,14 @@
 		3B4BDA9F1AB55F7D00A35769 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4BDA991AB55F7D00A35769 /* AppDelegate.m */; };
 		3BDA37871AB7AA7600332938 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDA37861AB7AA7600332938 /* CollectionViewCell.m */; };
 		3BDB1DB61AB6842E00AF89EE /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB1DB51AB6842E00AF89EE /* ImageDownloader.m */; };
+		3BE087821AB93DC7001B51C7 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE087811AB93DC7001B51C7 /* InterfaceController.m */; };
+		3BE087851AB93DC7001B51C7 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE087841AB93DC7001B51C7 /* NotificationController.m */; };
+		3BE087881AB93DC7001B51C7 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE087871AB93DC7001B51C7 /* GlanceController.m */; };
+		3BE0878A1AB93DC7001B51C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE087891AB93DC7001B51C7 /* Images.xcassets */; };
+		3BE0878E1AB93DC7001B51C7 /* News WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 3BE0878D1AB93DC7001B51C7 /* News WatchKit App.app */; };
+		3BE087961AB93DC7001B51C7 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BE087941AB93DC7001B51C7 /* Interface.storyboard */; };
+		3BE087981AB93DC7001B51C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BE087971AB93DC7001B51C7 /* Images.xcassets */; };
+		3BE0879B1AB93DC7001B51C7 /* News WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BE0877B1AB93DC7001B51C7 /* News WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3BEE71941AB574A1006D2777 /* FeedDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE71931AB574A1006D2777 /* FeedDownloader.m */; };
 		3BEE71971AB574E0006D2777 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEE71961AB574E0006D2777 /* Feed.m */; };
 /* End PBXBuildFile section */
@@ -29,7 +37,35 @@
 			remoteGlobalIDString = 3B4BDA6D1AB55EB200A35769;
 			remoteInfo = News;
 		};
+		3BE0878F1AB93DC7001B51C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4BDA661AB55EB200A35769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BE0878C1AB93DC7001B51C7;
+			remoteInfo = "News WatchKit App";
+		};
+		3BE087991AB93DC7001B51C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4BDA661AB55EB200A35769 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BE0877A1AB93DC7001B51C7;
+			remoteInfo = "News WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BE087A21AB93DC7001B51C7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BE0879B1AB93DC7001B51C7 /* News WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3B4BDA6E1AB55EB200A35769 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +87,22 @@
 		3BDA37861AB7AA7600332938 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		3BDB1DB41AB6842E00AF89EE /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		3BDB1DB51AB6842E00AF89EE /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		3BE0877B1AB93DC7001B51C7 /* News WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "News WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE0877E1AB93DC7001B51C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE0877F1AB93DC7001B51C7 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3BE087801AB93DC7001B51C7 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		3BE087811AB93DC7001B51C7 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		3BE087831AB93DC7001B51C7 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		3BE087841AB93DC7001B51C7 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		3BE087861AB93DC7001B51C7 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		3BE087871AB93DC7001B51C7 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		3BE087891AB93DC7001B51C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3BE0878D1AB93DC7001B51C7 /* News WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE087931AB93DC7001B51C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE087951AB93DC7001B51C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3BE087971AB93DC7001B51C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3BE087A31AB93ED8001B51C7 /* News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = News.entitlements; sourceTree = "<group>"; };
+		3BE087A41AB93EF1001B51C7 /* News WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "News WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		3BEE71921AB574A1006D2777 /* FeedDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDownloader.h; sourceTree = "<group>"; };
 		3BEE71931AB574A1006D2777 /* FeedDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDownloader.m; sourceTree = "<group>"; };
 		3BEE71951AB574E0006D2777 /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
@@ -72,6 +124,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BE087781AB93DC7001B51C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +139,8 @@
 			children = (
 				3B4BDA701AB55EB200A35769 /* News */,
 				3B4BDA8A1AB55EB200A35769 /* NewsTests */,
+				3BE0877C1AB93DC7001B51C7 /* News WatchKit Extension */,
+				3BE087911AB93DC7001B51C7 /* News WatchKit App */,
 				3B4BDA6F1AB55EB200A35769 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +150,8 @@
 			children = (
 				3B4BDA6E1AB55EB200A35769 /* News.app */,
 				3B4BDA871AB55EB200A35769 /* NewsTests.xctest */,
+				3BE0877B1AB93DC7001B51C7 /* News WatchKit Extension.appex */,
+				3BE0878D1AB93DC7001B51C7 /* News WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +159,7 @@
 		3B4BDA701AB55EB200A35769 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				3BE087A31AB93ED8001B51C7 /* News.entitlements */,
 				3B4BDA9A1AB55F7D00A35769 /* AppDelegate.h */,
 				3B4BDA9C1AB55F7D00A35769 /* TableViewController.h */,
 				3B4BDA971AB55F7D00A35769 /* TableViewController.m */,
@@ -144,6 +208,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3BE0877C1AB93DC7001B51C7 /* News WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3BE087A41AB93EF1001B51C7 /* News WatchKit Extension.entitlements */,
+				3BE087801AB93DC7001B51C7 /* InterfaceController.h */,
+				3BE087811AB93DC7001B51C7 /* InterfaceController.m */,
+				3BE087831AB93DC7001B51C7 /* NotificationController.h */,
+				3BE087841AB93DC7001B51C7 /* NotificationController.m */,
+				3BE087861AB93DC7001B51C7 /* GlanceController.h */,
+				3BE087871AB93DC7001B51C7 /* GlanceController.m */,
+				3BE087891AB93DC7001B51C7 /* Images.xcassets */,
+				3BE0877D1AB93DC7001B51C7 /* Supporting Files */,
+			);
+			path = "News WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		3BE0877D1AB93DC7001B51C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BE0877E1AB93DC7001B51C7 /* Info.plist */,
+				3BE0877F1AB93DC7001B51C7 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3BE087911AB93DC7001B51C7 /* News WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				3BE087941AB93DC7001B51C7 /* Interface.storyboard */,
+				3BE087971AB93DC7001B51C7 /* Images.xcassets */,
+				3BE087921AB93DC7001B51C7 /* Supporting Files */,
+			);
+			path = "News WatchKit App";
+			sourceTree = "<group>";
+		};
+		3BE087921AB93DC7001B51C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BE087931AB93DC7001B51C7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,10 +261,12 @@
 				3B4BDA6A1AB55EB200A35769 /* Sources */,
 				3B4BDA6B1AB55EB200A35769 /* Frameworks */,
 				3B4BDA6C1AB55EB200A35769 /* Resources */,
+				3BE087A21AB93DC7001B51C7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				3BE0879A1AB93DC7001B51C7 /* PBXTargetDependency */,
 			);
 			name = News;
 			productName = News;
@@ -182,6 +291,39 @@
 			productReference = 3B4BDA871AB55EB200A35769 /* NewsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3BE0877A1AB93DC7001B51C7 /* News WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BE087A11AB93DC7001B51C7 /* Build configuration list for PBXNativeTarget "News WatchKit Extension" */;
+			buildPhases = (
+				3BE087771AB93DC7001B51C7 /* Sources */,
+				3BE087781AB93DC7001B51C7 /* Frameworks */,
+				3BE087791AB93DC7001B51C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BE087901AB93DC7001B51C7 /* PBXTargetDependency */,
+			);
+			name = "News WatchKit Extension";
+			productName = "News WatchKit Extension";
+			productReference = 3BE0877B1AB93DC7001B51C7 /* News WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		3BE0878C1AB93DC7001B51C7 /* News WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BE087A01AB93DC7001B51C7 /* Build configuration list for PBXNativeTarget "News WatchKit App" */;
+			buildPhases = (
+				3BE0878B1AB93DC7001B51C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "News WatchKit App";
+			productName = "News WatchKit App";
+			productReference = 3BE0878D1AB93DC7001B51C7 /* News WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,10 +335,28 @@
 				TargetAttributes = {
 					3B4BDA6D1AB55EB200A35769 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = USTN6J555B;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3B4BDA861AB55EB200A35769 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 3B4BDA6D1AB55EB200A35769;
+					};
+					3BE0877A1AB93DC7001B51C7 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = USTN6J555B;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					3BE0878C1AB93DC7001B51C7 = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -215,6 +375,8 @@
 			targets = (
 				3B4BDA6D1AB55EB200A35769 /* News */,
 				3B4BDA861AB55EB200A35769 /* NewsTests */,
+				3BE0877A1AB93DC7001B51C7 /* News WatchKit Extension */,
+				3BE0878C1AB93DC7001B51C7 /* News WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +396,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BE087791AB93DC7001B51C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE0878A1AB93DC7001B51C7 /* Images.xcassets in Resources */,
+				3BE0878E1AB93DC7001B51C7 /* News WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BE0878B1AB93DC7001B51C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE087961AB93DC7001B51C7 /* Interface.storyboard in Resources */,
+				3BE087981AB93DC7001B51C7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +443,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3BE087771AB93DC7001B51C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BE087851AB93DC7001B51C7 /* NotificationController.m in Sources */,
+				3BE087821AB93DC7001B51C7 /* InterfaceController.m in Sources */,
+				3BE087881AB93DC7001B51C7 /* GlanceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -270,6 +460,16 @@
 			isa = PBXTargetDependency;
 			target = 3B4BDA6D1AB55EB200A35769 /* News */;
 			targetProxy = 3B4BDA881AB55EB200A35769 /* PBXContainerItemProxy */;
+		};
+		3BE087901AB93DC7001B51C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BE0878C1AB93DC7001B51C7 /* News WatchKit App */;
+			targetProxy = 3BE0878F1AB93DC7001B51C7 /* PBXContainerItemProxy */;
+		};
+		3BE0879A1AB93DC7001B51C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BE0877A1AB93DC7001B51C7 /* News WatchKit Extension */;
+			targetProxy = 3BE087991AB93DC7001B51C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -288,6 +488,14 @@
 				3B4BDA811AB55EB200A35769 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		3BE087941AB93DC7001B51C7 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BE087951AB93DC7001B51C7 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -373,9 +581,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = News/News.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -383,9 +595,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = News/News.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = News/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -423,6 +639,68 @@
 			};
 			name = Release;
 		};
+		3BE0879C1AB93DC7001B51C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "News WatchKit Extension/News WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "News WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3BE0879D1AB93DC7001B51C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "News WatchKit Extension/News WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "News WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3BE0879E1AB93DC7001B51C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = News_WatchKit_Extension;
+				INFOPLIST_FILE = "News WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		3BE0879F1AB93DC7001B51C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = News_WatchKit_Extension;
+				INFOPLIST_FILE = "News WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -452,6 +730,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3BE087A01AB93DC7001B51C7 /* Build configuration list for PBXNativeTarget "News WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE0879E1AB93DC7001B51C7 /* Debug */,
+				3BE0879F1AB93DC7001B51C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3BE087A11AB93DC7001B51C7 /* Build configuration list for PBXNativeTarget "News WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BE0879C1AB93DC7001B51C7 /* Debug */,
+				3BE0879D1AB93DC7001B51C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
