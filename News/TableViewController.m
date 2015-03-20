@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSMutableArray *feedArray;
 @property (nonatomic, strong) NSMutableDictionary *contentOffsetDictionary;
 @property (nonatomic, strong) NSMutableDictionary *imageCache;
+@property (nonatomic, strong) NSArray *urls;
 
 @end
 
@@ -27,7 +28,8 @@
 {
     [super loadView];
     
-    NSArray *urls = @[@"http://recode.net/feed/",
+    self.urls = @[@"http://radaronline.com/feed/",
+                      @"http://recode.net/feed/",
                       @"http://www.californiagoldenblogs.com/rss/current",
                       @"http://espn.go.com/blog/feed?blog=pac12",
                       @"http://techcrunch.com/feed",
@@ -42,11 +44,11 @@
                       @"http://www.vice.com/rss",
                       @"http://rss.slashdot.org/Slashdot/slashdot",
                       @"http://feeds.arstechnica.com/arstechnica/index/"];
-    self.feedArray = [NSMutableArray arrayWithCapacity:urls.count];
+    self.feedArray = [NSMutableArray arrayWithCapacity:self.urls.count];
 
-    for (NSInteger tableViewRow = 0; tableViewRow < urls.count; tableViewRow++)
+    for (NSInteger tableViewRow = 0; tableViewRow < self.urls.count; tableViewRow++)
     {
-        NSString *url = urls[tableViewRow];
+        NSString *url = self.urls[tableViewRow];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:tableViewRow inSection:0];
         [self downloadEntrySummariesForFeedWithUrl:url atIndexPath:indexPath];
     }
@@ -62,14 +64,13 @@
     [feed downloadEntrySummariesWithCompletion:^{
         [self updateUIForFeedAtIndexPath:indexPath];
         [self downloadImagesForFeed:feed atIndexPath:indexPath];
+//        [self saveFeedData];
     }];
 }
 
 - (void)downloadImagesForFeed:(Feed *)feed atIndexPath:(NSIndexPath *)indexPath {
     for (NSInteger imageIndex = 0; imageIndex < feed.entry_images.count; imageIndex++) {
         [feed downloadEntryImageAtIndex:imageIndex withCompletion:^(NSData *imageData){
-            Feed *feed = (Feed *)self.feedArray[indexPath.row];
-            feed.entry_image_data[feed.entry_links[imageIndex]] = imageData;
             if (!self.imageCache) {
                 self.imageCache = [[NSMutableDictionary alloc] init];
             }
@@ -79,6 +80,9 @@
             if (image) {
                 self.imageCache[feed.entry_images[imageIndex]] = [UIImage imageWithData:imageData];
                 [self updateUIForFeedImageAtIndexPath:indexPath andImageIndex:imageIndex];
+                Feed *feed = (Feed *)self.feedArray[indexPath.row];
+                feed.entry_image_data[feed.entry_links[imageIndex]] = imageData;
+//                [self saveImageData];
             }
         }];
     }
@@ -96,6 +100,37 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     });
+}
+
+#pragma mark Data Persistance
+-(void)saveFeedData {
+    NSMutableArray *allFeeds = [[NSMutableArray alloc] init];
+    for (NSInteger index = 0; index < self.feedArray.count; index++) {
+        Feed *feed = self.feedArray[index];
+        NSDictionary *feedData = feed.raw_feed_data;
+        if (feedData) {
+            [allFeeds addObject:feedData];
+        }
+    }
+    if (allFeeds.count == self.urls.count) {
+        NSLog(@"saving feed data: %@", allFeeds);
+        NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.news"];
+        [defaults setObject:allFeeds forKey:@"allFeeds"];
+    }
+}
+
+-(void)saveImageData {
+    NSMutableArray *allImageData = [[NSMutableArray alloc] init];
+    for (NSInteger index = 0; index < self.feedArray.count; index++) {
+        Feed *feed = self.feedArray[index];
+        NSDictionary *feedImageData = feed.entry_image_data;
+        if (feedImageData) {
+            [allImageData addObject:feedImageData];
+        }
+    }
+    NSLog(@"saving image data");
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.news"];
+    [defaults setObject:allImageData forKey:@"allImageData"];
 }
 
 #pragma mark View Life Cycle Methods

@@ -38,11 +38,14 @@
 }
 
 -(void)readFromDictionary:(NSDictionary *)d {
+    self.raw_feed_data = d;
     NSDictionary *feed = d[@"feed"];
-    self.title = feed[@"feed_title"];
+    self.feed_title = feed[@"feed_title"];
+    self.feed_icon = feed[@"feed_icon"];
     self.entry_links = feed[@"entry_links"];
     self.entry_titles = feed[@"entry_titles"];
     self.entry_images = feed[@"entry_images"];
+    self.entry_descriptions = feed[@"entry_descriptions"];
     self.entry_image_data = [[NSMutableDictionary alloc] init];
 }
 @end

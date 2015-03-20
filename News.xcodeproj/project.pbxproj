@@ -161,9 +161,9 @@
 			children = (
 				3BE087A31AB93ED8001B51C7 /* News.entitlements */,
 				3B4BDA9A1AB55F7D00A35769 /* AppDelegate.h */,
+				3B4BDA991AB55F7D00A35769 /* AppDelegate.m */,
 				3B4BDA9C1AB55F7D00A35769 /* TableViewController.h */,
 				3B4BDA971AB55F7D00A35769 /* TableViewController.m */,
-				3B4BDA991AB55F7D00A35769 /* AppDelegate.m */,
 				3B4BDA9B1AB55F7D00A35769 /* TableViewCell.h */,
 				3B4BDA981AB55F7D00A35769 /* TableViewCell.m */,
 				3BDA37851AB7AA7600332938 /* CollectionViewCell.h */,

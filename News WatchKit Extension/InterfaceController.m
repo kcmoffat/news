@@ -20,6 +20,9 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.news"];
+    NSLog(@"feedData: %@", [defaults objectForKey:@"allFeeds"]);
+    NSLog(@"imageFeedData count: %lu", (unsigned long)[[defaults objectForKey:@"allFeeds"] count]);
 }
 
 - (void)willActivate {

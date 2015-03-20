@@ -9,6 +9,7 @@
 #import "CollectionViewCell.h"
 
 @interface CollectionViewCell ()
+@property (strong, nonatomic) UIView *titleLabelBackgroundView;
 @end
 
 @implementation CollectionViewCell
@@ -17,16 +18,24 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setupImageView];
+        [self setupTitleLabelBackground];
         [self setupTitleLabel];
     }
     return self;
 }
 
 -(void)setupTitleLabel {
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, self.contentView.bounds.size.width-5, self.contentView.bounds.size.height-5)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, self.contentView.bounds.size.width-10, self.contentView.bounds.size.height-10)];
     self.label.numberOfLines = 0;
     self.label.textColor = [UIColor whiteColor];
     [self.contentView addSubview:self.label];
+}
+
+-(void)setupTitleLabelBackground {
+    self.titleLabelBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.bounds.size.width, self.contentView.bounds.size.height)];
+    self.titleLabelBackgroundView.backgroundColor = [UIColor blackColor];
+    self.titleLabelBackgroundView.alpha = .5;
+    [self.contentView addSubview:self.titleLabelBackgroundView];
 }
 
 -(void)updateTitleLabel:(NSString *)string {
@@ -34,7 +43,12 @@
     NSMutableAttributedString *mutAttrStr = [[NSMutableAttributedString alloc] initWithString:string attributes:attributes];
     
     self.label.attributedText = mutAttrStr;
-//    [self.label sizeToFit];
+    [self.label sizeToFit];
+//    [self updateTitleLabelBackground];
+}
+
+-(void)updateTitleLabelBackground {
+    
 }
 
 -(void)setupImageView {
