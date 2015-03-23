@@ -20,7 +20,7 @@
                                      {
                                          if (!error) {
                                              NSDictionary *d = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-                                             NSLog(@"feed: %@", d);
+//                                             NSLog(@"feed: %@", d);
                                              if (self.completionHandler) {
                                                  self.completionHandler(d);
                                              }

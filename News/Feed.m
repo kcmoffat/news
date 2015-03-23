@@ -17,7 +17,6 @@
     FeedDownloader *downloader = [[FeedDownloader alloc] init];
     downloader.feedURL = self.feed_link;
     downloader.completionHandler = ^(NSDictionary *feedData) {
-        NSLog(@"finished download");
         [self readFromDictionary:feedData];
         if (completion) {
             completion();
